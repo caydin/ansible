@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars:
+    loopList:
+      - foo
+      - 1, 2, 3 4, 5
+      - record, judge, next, credit
+  tasks:
+    - debug:
+        msg: "We have {{ item }}"
+      loop: "{{ loopList }}"
+    - debug:
+        msg: "I love {{ item }}!"
+      loop: "{{ loopList }}"
