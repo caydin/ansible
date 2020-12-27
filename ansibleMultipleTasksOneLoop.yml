@@ -8,8 +8,11 @@
       - record, judge, next, credit
   tasks:
     - debug:
-        msg: "We have {{ item }}"
+        msg: "Stirng {{ item }}"
       loop: "{{ loopList }}"
     - debug:
-        msg: "I love {{ item }}!"
+        msg: "Numbers {{ item }}!"
       loop: "{{ loopList }}"
+    - debug:
+        msg: "List {{ item }}!"
+      loop: "{{ loopList }}"      
